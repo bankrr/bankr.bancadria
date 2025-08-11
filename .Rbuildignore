@@ -1,0 +1,5 @@
+^\.Rproj\.user$
+^[.]?air[.]toml$
+^\.vscode$
+^CLAUDE\.md$
+\.Rproj$
