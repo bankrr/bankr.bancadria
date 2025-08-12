@@ -5,7 +5,7 @@ tidy <- function(dat) {
   validate(dat)
   colnames(dat) <- tolower(colnames(dat))
   colnames(dat)[colnames(dat) == "x"] <- "currency"
-  colnames(dat)[colnames(dat) == "descrizione"] <- "description"
+  colnames(dat)[colnames(dat) == "descrizione.operazione"] <- "description"
   colnames(dat)[colnames(dat) == "data"] <- "date"
 
   dat_sub <- dat[, setdiff(colnames(dat), "x.1")]
