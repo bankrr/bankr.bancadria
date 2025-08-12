@@ -14,6 +14,10 @@ validate <- function(dat) {
     stop("Input must be a data.frame")
   }
 
+  if (!nrow(dat) > 0) {
+    stop("Input have at least one row")
+  }
+
   if (!all(names(expected_cols) %in% colnames(dat))) {
     missing_cols <- setdiff(names(expected_cols), colnames(dat))
     stop("Missing required columns: ", paste(missing_cols, collapse = ", "))
