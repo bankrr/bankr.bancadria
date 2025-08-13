@@ -103,6 +103,16 @@ validate <- function(dat) {
     }
   }
 
+  # Check that required columns don't contain NA values
+  required_no_na_cols <- c("DATA", "AVERE", "DESCRIZIONE.OPERAZIONE")
+  for (col in required_no_na_cols) {
+    if (col %in% colnames(dat)) {
+      if (anyNA(dat[[col]])) {
+        stop("Column '", col, "' contains NA values.")
+      }
+    }
+  }
+
   # Validate X column contains only "EUR"
   if ("X" %in% colnames(dat)) {
     if (anyNA(is.na(dat[["X"]]))) {
