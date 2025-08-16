@@ -2,7 +2,7 @@
 #' @param path A path.
 #' @export
 read <- function(path) {
-  if (!chkr.utils::is_string(path)) {
+  if (!(is.character(path) && length(path) == 1)) {
     stop("Path is not a character of length one.")
   }
   if (!file.exists(path)) {

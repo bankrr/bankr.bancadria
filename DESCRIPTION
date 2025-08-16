@@ -5,8 +5,7 @@ Authors@R:
     person("Andrea", "Ranzato", , "andrea.ranzato01@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: file LICENSE
-Imports: 
-    chkr.utils,
+Imports:
     utils
 Suggests: 
     testthat (>= 3.0.0)
