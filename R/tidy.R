@@ -48,11 +48,11 @@ tidy <- function(dat) {
   }
 
   # Remove balance rows that are not actual transactions using regex
-  if ("descrizione" %in% colnames(dat_sub)) {
+  if ("descrizione.operazione" %in% colnames(dat_sub)) {
     balance_pattern <- "^(Saldo contabile|Saldo liquido|Disponibilit\u00e0 al|Saldo SBF per conti unici al|Saldo iniziale)"
     exclude_rows <- grepl(
       balance_pattern,
-      dat_sub[["descrizione"]],
+      dat_sub[["descrizione.operazione"]],
       perl = TRUE
     )
     dat_sub <- dat_sub[!exclude_rows, ]
