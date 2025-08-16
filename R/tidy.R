@@ -24,12 +24,6 @@ tidy <- function(dat) {
     dat_sub[["avere"]] <- gsub(",", ".", dat_sub[["avere"]])
   }
 
-  dat_sub[["description"]] <- tolower(gsub(
-    "\\sCausale.+|^Ordinante:\\s",
-    "",
-    dat_sub[["descrizione.operazione"]]
-  ))
-
   # Convert DARE and AVERE to numeric
   # if ("dare" %in% colnames(dat_sub)) {
   #   dat_sub[["dare"]] <- as.numeric(dat_sub[["dare"]])
