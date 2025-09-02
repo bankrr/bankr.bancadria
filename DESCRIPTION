@@ -3,7 +3,7 @@ Title: Reads and Tidy Bank Statements from Banca Adria
 Version: 0.0.0.9000
 Authors@R: 
     person("Andrea", "Ranzato", , "andrea.ranzato01@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Reads and Tidy Bank Statements from Banca Adria.
 License: file LICENSE
 Imports:
     utils
