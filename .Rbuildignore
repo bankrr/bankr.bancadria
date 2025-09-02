@@ -3,3 +3,4 @@
 ^\.vscode$
 ^CLAUDE\.md$
 \.Rproj$
+^README\.Rmd$
